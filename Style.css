@@ -34,7 +34,7 @@ body {
     font-weight: 300;
     color: #fff;
     margin: 1.5rem auto;
-    max-width: 305px;
+    max-width: 400px;
     text-align: center;
   }
   
@@ -45,6 +45,11 @@ body {
     margin: 2rem auto;
     display: block;
     position: center;
+    transition: transform 0.4s ease;;
+    &:hover {
+      transform: scale(1.5);
+      transition: transform 0.5s ease-in-out;
+    }
   }
   
   .laba-logo {
@@ -193,6 +198,25 @@ body {
     .center {
       text-align: center;
     }
+    /* === COLORI E STILI PERSONALIZZATI EVENTI === */
+.colore-fucsia {
+  color: #d21e84;
+  font-weight: 600;
+}
+
+.colore-arancio {
+  color: #ff7f32;
+  font-weight: 600;
+}
+
+.testo-light {
+  font-weight: 400;
+}
+
+.testo-bold {
+  font-weight: 600;
+}
+
   
  
   }
@@ -270,6 +294,27 @@ body {
     .linee-top-wrapper,
     .croppata-wrapper {
       display: none;
+    }
+    .colore-fucsia {
+      color: #d21e84;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    
+    .colore-arancio {
+      color: #ff7f32;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    
+    .testo-light {
+      font-weight: 400;
+      font-size: 1rem;
+    }
+    
+    .testo-bold {
+      font-weight: 600;
+      font-size: 1rem;
     }
   }
   
