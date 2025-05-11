@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/favicon.png">
-  <!-- update 2025-05-08 -->
+  
 </head>
 <body>
   <div class="linee-top-wrapper">
@@ -17,33 +17,57 @@
   <main class="grid-container">
     <!-- COLONNA SINISTRA -->
     <div class="left">
-      <h2 class="city">Brescia</h2>
-      <img src="assets/freccia-eventi@2x.png" alt="Freccia evento" class="freccia" />
-      <div class="evento">
-        <h3 class="orario">10:00–18:00</h3>
-        <p class="descrizione">
-          <span class="colore-fucsia">Sede di via Don Vender</span><br />
-          <span class="colore-fucsia testo-light">
-            Expo della creatività<br />
-            Padiglioni a cura di tutti i corsi di LABA
-          </span>
-        </p>
+     
+  
+        <!-- EVENTO MATTINA -->
+        <div class="evento">
+          <div class="blocco-orario">
+            <span class="etichetta">DALLE</span>
+            <span class="orario-bold">10:00</span>
+            <span class="etichetta">ALLE</span>
+            <span class="orario-bold">18:00</span>
+          </div>
+      
+          <div class="blocco-testo">
+            <h3 class="titolo-evento">
+              <img src="assets/freccia-arancio.svg" class="freccia-icona" alt="freccia arancio" />
+              EXPO <br /> DELLA CREATIVITÀ
+            </h3>
+            <p class="sede">
+              PADIGLIONI A CURA DI<br />
+              <span class="arancio">TUTTI I CORSI LABA</span><br />
+              <span class="arancio">SEDE IN VIA DON VENDER</span>
+            </p>
+          </div>
+        </div>
+      
+        <!-- EVENTO SERA -->
+        <div class="evento">
+          <div class="blocco-orario">
+            <span class="etichetta">DALLE</span>
+            <span class="orario-bold">19:00</span>
+            <span class="etichetta">ALLE</span>
+            <span class="orario-bold">22:30</span>
+          </div>
+      
+          <div class="blocco-testo">
+            <h3 class="titolo-evento">
+              <img src="assets/freccia-fucsia.svg" class="freccia-icona" alt="freccia fucsia" />
+              FASHION SHOW &<br />PERFORMANCES
+            </h3>
+            <p class="descrizione-evento">
+              PRESENTAZIONE ASSOCIAZIONE ALUMNI<br />
+              <span class="fucsia">IN VIA ZARA, 68, BRESCIA</span><br />
+              <span class="fucsia">INGRESSO SU INVITO</span>
+            </p>
+          </div>
+        </div>
+      
       </div>
       
-      <div class="evento">
-        <h3 class="orario">19:00–23:30</h3>
-        <p class="descrizione">
-          <span class="colore-arancio">Hangar di via Zara</span><br />
-          <span class="colore-arancio testo-light">
-            <span class="testo-bold">Performance di espressione corporea</span><br />
-            Presentazione associazione “Alumni”<br />
-            <span class="testo-bold">Fashion Show</span><br />
-            <span class="testo-bold">Buffet</span><br />
-            Ingresso a invito.
-          </span>
-        </p>
-      </div>
-    </div>
+      
+
+    
 
     <!-- BLOCCO CENTRALE -->
     <div class="center">
@@ -56,16 +80,17 @@
     <!-- COLONNA DESTRA -->
     <div class="right">
       <img src="assets/pallini's.png" alt="Pallini colorati" class="pallini" />
-      <p class="quote">
-        
-
-        Qui inizia<br />
-        il tuo prossimo<br />
-        pensiero <br>
-      </p>
+      
+      
+     
       <div class="croppata-wrapper">
         <img src="assets/croppata.png" alt="decorazione">
       </div>
   </main>
+  <div class="spacer-footer"></div>
+  <footer class="footer">
+    <p>Synapses 2025 – Visionarie Connessioni Festival / All Rights Reserved</p>
+  </footer>
+  
 </body>
 </html>

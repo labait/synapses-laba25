@@ -1,3 +1,4 @@
+/* === BASE STYLES === */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -11,45 +12,73 @@ body {
 .grid-container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 5rem 5rem 0 0rem  ;
+  padding: 4rem 4rem 0 4rem;
+gap: 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: minmax(250px, 1fr) auto minmax(250px, 1fr);
+gap: 3rem;
   align-items: start;
   position: relative;
   overflow-x: visible;
+}
 
+.left {
+  text-align: left;
+  max-width: 100%;
+  padding-left: 1rem;
+  margin-top: 8rem;
+};
+
+
+.right {
+  text-align: right;
+  max-width: 230px;
+  margin: 0 auto;
+  margin-right: 3rem;
+  position: relative;
+  margin-top: 8rem;
+}
+
+.center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo-synapses {
   width: 100%;
   max-width: 449px;
   height: auto;
-  margin: 0 auto 1rem;
-  display: block;
+  margin: 2rem auto 1rem;
+display: block;
+  transform: translateY(-0.75rem); 
 }
 
 .subtitle {
-  font-size: 1.375rem;
-  font-weight: 300;
+  font-size: 1.2rem;
+  font-weight: 200;
   color: #fff;
   margin: 1.5rem auto;
   max-width: 400px;
   text-align: center;
+  transform: translateY(-0.75rem); 
 }
 
 .data-img {
   width: 100%;
-  max-width: 568px;
+  max-width: 350px;
   height: auto;
-  margin: 2rem auto;
+  margin: 3rem auto;
   display: block;
   position: center;
-  transition: transform 0.4s ease;;
-  &:hover {
-    transform: scale(1.5);
-    transition: transform 0.5s ease-in-out;
-  }
+  transition: transform 0.4s ease;
+}
+
+.data-img:hover {
+  transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
 }
 
 .laba-logo {
@@ -58,82 +87,96 @@ body {
   height: auto;
   margin: 3rem auto 2rem;
   display: block;
-  
+  transform: translateY(3rem);
 }
 
-
-  .left {
-      text-align: left;
-      max-width: 100%;
-      padding-left: 1rem;
-      margin-top: 8rem;
-    }
-    
-
-.city {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+.titolo-evento {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.2;
+  margin: 1rem 0 0.5rem;
+  flex-wrap: wrap;
 }
 
-.freccia {
-  width: 109px;
+.freccia-icona {
+  width: 30px;
   height: auto;
-  margin-bottom: 1.5rem;
+  vertical-align: middle;
+}
+
+.sede, .descrizione-evento {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+  margin: 0.5rem 0 2rem;
+  line-height: 1.4;
 }
 
 .evento {
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
 }
 
 .orario {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 0.75rem;
-  margin-left: 2rem;
+  padding-left: 0.5rem;
 }
 
 .descrizione {
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.4;
   margin: 0;
-  margin-left: 6rem;
+  padding-left: 0.5rem;
 }
 
-.right {
-  text-align: right;
-  max-width: 230px;
-  margin: 0 auto;
-  margin-right: 3rem;
-  position: relative;
+.blocco-orario {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.orario-bold {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0 0.25rem;
+}
+
+.etichetta {
+  background-color: #fff;
+  color: #000;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.arancio {
+  color: #ff7f32;
+  font-weight: 400;
+}
+
+.fucsia {
+  color: #d21e84;
+  font-weight: 400;
 }
 
 .pallini {
-  width: 72px;
+  width: 300px; 
   height: auto;
-  margin-bottom: 1.5rem;
-  margin-top: 4rem;
-  margin-left: -4rem;
+  margin-bottom: -1rem;
+  margin-top: 15rem;
+  margin-left: -1rem; 
 }
-
-.quote {
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 1.4;
-  margin-bottom: 2rem;
-  margin-right: 1rem;
-  text-align: left;
-  padding-right: 0;
-}
-
-.linee {
-  width: 100%;
-  height: auto;
-}
-
-
-
 
 .linee-top-wrapper {
   position: absolute;
@@ -143,20 +186,32 @@ body {
   max-width: 300px;
   z-index: -1;
   display: block;
+  transition: transform 0.4s ease;
 }
 
+.linee-top-wrapper:hover {
+  transform: scale(1.5);
+  transition: transform 0.5s ease-in-out;
+}
 
 .linee-top {
   width: 100%;
   height: auto;
+  transition: transform 0.4s ease;
+}
+
+.linee-top:hover {
+  transform: scale(1.5);
+  transition: transform 0.5s ease-in-out;
 }
 
 .croppata-wrapper {
   position: absolute;
-  bottom: -5rem;
-  right: -8rem; /* Sposta fuori dal bordo destro */
+  bottom: 0;
+  right: 5.5rem;
   z-index: 0;
-  margin-top:-400rem;
+  transform: translateY(50%); /* spinge l'arcobaleno più in basso */
+ 
 }
 
 
@@ -166,118 +221,92 @@ body {
   height: auto;
 }
 
+.spacer-footer {
+  height: 60px;
+  width: 100%;
+}
 
+.footer {
+  background-color: #111;
+  color: #ccc;
+  text-align: center;
+  font-size: 0.875rem;
+  padding: 1rem;
+  width: 100%;
+  margin-top: 3rem;
+  transition: background-color 0.3s ease;
+}
+
+.footer:hover {
+  background-color: #ee762b;
+}
+
+/* === MEDIA QUERIES === */
 
 @media (min-width: 768px) {
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-    align-items: end;
+  .left {
+    align-self: start;
+    margin-top: 11rem;
   }
 
   .right {
-    max-height: 600px;      
-    overflow-x: visible;       
-    position: relative;     
-    text-align: right;
     padding-bottom: 20rem;
+    margin-top: 8rem;
   }
 
-  .left {
-      padding-left: 0;
-      margin-left: -2rem;   /* sposta più a sinistra */
-      text-align: left;
-      max-width: 100%;
-      text-align: left;
+  .laba-logo {
+    margin-top: 2rem;
   }
-
-  .center {
-    text-align: center;
-  }
-  /* === COLORI E STILI PERSONALIZZATI EVENTI === */
-.colore-fucsia {
-color: #d21e84;
-font-weight: 600;
 }
 
-.colore-arancio {
-color: #ff7f32;
-font-weight: 600;
-}
-
-.testo-light {
-font-weight: 400;
-}
-
-.testo-bold {
-font-weight: 600;
-}
-
-
-
-}
-
-@media (max-width: 767px) {
+/* === RESPONSIVE UNIFICATO PER MOBILE E TABLET FINO A 1024px === */
+@media (max-width: 1024px) {
   .grid-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 2rem 1rem;
     gap: 2.5rem;
-    align-items: center;
     text-align: center;
   }
 
-  .left,
-  .center,
-  .right {
-    max-width: 100%;
-    margin: 0 auto;
+  .left, .center, .right {
+    order: unset;
+    text-align: center;
     padding: 0;
-    text-align: center;
+    margin: 0 auto;
+    max-width: 90%;
   }
 
-  .left {
-    order: 2;
-  }
+  .center { order: 1; }
+  .left { order: 2; }
+  .right { order: 3; }
 
-  .center {
-    order: 1;
-  }
-
-  .right {
-    order: 3;
-  }
-
-  .logo-synapses,
-  .data-img,
-  .laba-logo {
-    margin: 1.5rem auto;
+  .logo-synapses, .data-img, .laba-logo {
+    margin: 1rem auto;
     display: block;
     width: 80%;
+    max-width: 300px;
+    transform: translateY(0);
   }
 
   .subtitle {
     font-size: 1rem;
     margin: 1rem auto;
     max-width: 90%;
+    transform: translateY(0);
   }
 
-  .freccia,
-  .pallini {
+  .freccia, .pallini {
     margin: 1rem auto;
     display: block;
   }
 
   .evento {
-    margin-bottom: 2rem;
+    margin-bottom: 3.5rem;
   }
 
-  .orario,
-  .descrizione {
+  .orario, .descrizione {
     margin: 0 auto 1rem;
     text-align: center;
     font-size: 1rem;
@@ -291,30 +320,16 @@ font-weight: 600;
     max-width: 90%;
   }
 
-  .linee-top-wrapper,
-  .croppata-wrapper {
+  .linee-top-wrapper, .croppata-wrapper {
     display: none;
   }
-  .colore-fucsia {
-    color: #d21e84;
-    font-weight: 600;
-    font-size: 1rem;
-  }
-  
-  .colore-arancio {
-    color: #ff7f32;
-    font-weight: 600;
-    font-size: 1rem;
-  }
-  
-  .testo-light {
-    font-weight: 400;
-    font-size: 1rem;
-  }
-  
-  .testo-bold {
-    font-weight: 600;
-    font-size: 1rem;
-  }
-}
 
+  .footer {
+    font-size: 0.75rem;
+    padding: 1rem;
+    line-height: 1.3;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+} 
