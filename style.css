@@ -184,7 +184,7 @@ display: block;
 
 .linee-top-wrapper {
   position: absolute;
-  top: -70vh;
+  top: -60vh;
   left: 5vw;
   width: 28vw;
   max-width: 300px;
@@ -224,11 +224,114 @@ display: block;
   max-width: 280px;
   height: auto;
 }
-
-.spacer-footer {
-  height: 60px;
-  width: 100%;
+.sezione-mappa {
+  text-align: center;
+  padding: 80px 20px 60px; /* Spazio sopra aumentato */
+  background-color: black;
+  color: white;
+  margin-top: 80px; /* Distanza dalla sezione precedente */
 }
+
+.titolo-mappa {
+  font-size: 2em;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.mappa-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.mappa-img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #fff;
+  border-radius: 12px;
+}
+.programma {
+  margin-top: 80px;
+  background-color: white;
+  font-family: 'Inter', sans-serif;
+  color:black;
+}
+
+.titolo-programma {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  margin: 0;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.categoria {
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  position: relative;
+}
+
+.categoria:hover {
+  opacity: 0.9;
+}
+
+.panel {
+  display: none;
+  padding: 30px 20px;
+  background-color: inherit;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  padding: 10px 0;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.row div {
+  flex: 1;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .row div {
+    padding: 8px 0;
+  }
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .titolo-mappa {
+    font-size: 1.5em;
+  }
+
+  .sezione-mappa {
+    padding: 60px 15px 40px;
+    margin-top: 60px;
+  }
+
+  .mappa-img {
+    border-radius: 8px;
+  }
+}
+
 
 .footer {
   background-color: #111;
@@ -237,13 +340,13 @@ display: block;
   font-size: 0.875rem;
   padding: 1rem;
   width: 100%;
-  margin-top: 3rem;
+  margin-top: 2rem;
   transition: background-color 0.3s ease;
 }
 
-.footer:hover {
+/*.footer:hover {
   background-color: #ee762b;
-}
+}*/
 
 /* === MEDIA QUERIES === */
 
