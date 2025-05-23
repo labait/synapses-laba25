@@ -232,9 +232,10 @@ display: block;
   margin-top: 80px; /* Distanza dalla sezione precedente */
 }
 
-.titolo-mappa {
+titolo-mappa {
   font-size: 2em;
-  margin-bottom: 30px;
+  margin-bottom: 3rem; /* ridotto da 30px */
+  margin-top: 0 rem;    /* nuovo: tira su la scritta */
   font-weight: 600;
 }
 
@@ -245,13 +246,17 @@ display: block;
 }
 
 .mappa-img {
-  width: 100%;
+  width: 110%;
   height: auto;
-
   border-radius: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateX(-5%); /* compensa l'eccesso per centrarla */
 }
 .programma {
   margin-top: 80px;
+  position: center;
   background-color: white;
   font-family: 'Inter', sans-serif;
   color:black;
@@ -328,9 +333,13 @@ display: block;
   }
 
   .mappa-img {
-    border-radius: 8px;
+    width: 100%; /* torna a stare nel viewport */
+    transform: none; /* rimuove lo shift laterale */
+    margin-left: auto;
+    margin-right: auto;
   }
 }
+
 
 
 .footer {
@@ -375,11 +384,12 @@ display: block;
     padding: 2rem 1rem;
     gap: 2.5rem;
     text-align: center;
-    .sede,
-.descrizione-evento {
-  margin-left: 0; /* Rimuove l’indentazione per mobile */
-  text-align: center; /* Assicura che resti centrato */
-}
+  }
+
+  .sede,
+  .descrizione-evento {
+    margin-left: 0;
+    text-align: center;
   }
 
   .left, .center, .right {
@@ -395,7 +405,7 @@ display: block;
   .right { order: 3; }
 
   .logo-synapses, .data-img, .laba-logo {
-    margin: 1rem auto;
+    margin: 1rem auto 0.5rem;
     display: block;
     width: 80%;
     max-width: 300px;
@@ -404,7 +414,7 @@ display: block;
 
   .subtitle {
     font-size: 1rem;
-    margin: 1rem auto;
+    margin: 1rem auto 0.5rem;
     max-width: 90%;
     transform: translateY(0);
   }
@@ -436,6 +446,26 @@ display: block;
     display: none;
   }
 
+  .sezione-mappa {
+    padding: 1.5rem 1rem 1rem;
+    margin-top: 1rem;
+  }
+
+  .titolo-mappa {
+    font-size: 1.4rem;
+    margin: 0.5rem auto 1rem;
+  }
+
+  .mappa-img {
+    width: 100%;
+    margin: 0 auto;
+    transform: none;
+  }
+
+  .programma {
+    margin-top: 1.5rem;
+  }
+
   .footer {
     font-size: 0.75rem;
     padding: 1rem;
@@ -444,4 +474,4 @@ display: block;
     margin: 0 auto;
     text-align: center;
   }
-} 
+}
